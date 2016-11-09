@@ -1,10 +1,10 @@
 # iadvize
 
 ## Requirements
-compass
-bower
+* compass
+* bower
 
 ## Installation
 
-bower install
-compass compile
+* bower install
+* compass compile

@@ -12,7 +12,8 @@
        <div class="col right">
            <h3>Batman</h3>
            <div ng-repeat="message in messages" class="message {{ message.username }}">
-               <span class="username">{{ message.username }} :</span> <span class="text">{{ message.message }}</span>
+               <span class="username">{{ message.username }} :
+               </span> <span class="text">{{ message.message }}</span>
            </div>
 
            <div class="message-box">
@@ -24,7 +25,8 @@
        <div class="col left">
            <h3>Robin</h3>
            <div ng-repeat="message in messages" class="message {{ message.username }}">
-               <span class="username">{{ message.username }} :</span> <span class="text">{{ message.message }}</span>
+               <span class="username">{{ message.username }} :
+               </span> <span class="text">{{ message.message }}</span>
            </div>
            <div class="message-box">
                <input type="text" ng-model="inputs.robin">
@@ -33,7 +35,7 @@
        </div>
    </div>
 
-<script src="bower_components/angular/angular.js"></script>
-<script src="js/main.js"></script>
-
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
