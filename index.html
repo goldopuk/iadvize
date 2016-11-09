@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>iAdvise</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+   <div class="wrapper" ng-controller="ChatController">
+       <div class="col right">
+           <h3>Batman</h3>
+           <div ng-repeat="message in messages" class="message {{ message.username }}">
+               <span class="username">{{ message.username }} :</span> <span class="text">{{ message.message }}</span>
+           </div>
+
+           <div class="message-box">
+               <input type="text" ng-model="inputs.batman">
+               <input type="submit" ng-click="send('batman', inputs.batman)">
+           </div>
+       </div>
+
+       <div class="col left">
+           <h3>Robin</h3>
+           <div ng-repeat="message in messages" class="message {{ message.username }}">
+               <span class="username">{{ message.username }} :</span> <span class="text">{{ message.message }}</span>
+           </div>
+           <div class="message-box">
+               <input type="text" ng-model="inputs.robin">
+               <input type="submit" ng-click="send('robin', inputs.robin)">
+           </div>
+       </div>
+   </div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/main.js"></script>
+
+</html>

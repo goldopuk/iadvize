@@ -1,0 +1,22 @@
+{
+  "name": "iadvize",
+  "homepage": "https://github.com/goldopuk/iadvize",
+  "authors": [
+    "Julien Colomb <julien.colomb@casavaticano.com.br>"
+  ],
+  "description": "test",
+  "main": "main.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}

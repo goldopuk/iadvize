@@ -1,0 +1,79 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.wrapper {
+  width: 980px;
+  margin: 0 auto;
+
+  .col {
+    float: left;
+    width: 40%;
+    border: 1px solid grey;
+    height: 400px;
+    position: relative;
+    padding: 0px;
+    margin: 10px;
+
+    .message-box {
+      padding: 5px;
+      border-top: 1px solid grey;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+
+      input[type=text] {
+        width: 330px;
+      }
+    }
+
+    .message {
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin: 0 10px 10px 10px;
+    }
+
+    .robin .username {
+      color:red;
+    }
+
+    .batman .username {
+      color:blue;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 5px 0;
+      border-bottom: 1px solid gray;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+.left {
+  @extend .col;
+
+  .batman  {
+    margin-left:100px !important;
+  }
+
+  .batman .username {
+    color:blue;
+  }
+}
+
+.right {
+  @extend .col;
+
+  .robin  {
+    margin-left: 100px !important;
+  }
+}
+
+
+
