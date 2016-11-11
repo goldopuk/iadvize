@@ -2,17 +2,23 @@ angular.module('iAdvise', [])
     .controller('ChatController', ['$scope', function ($scope) {
 
         $scope.messages = [];
+        $scope.userLeft = {name: 'Batman'};
+        $scope.userRight = {name: 'Robin'};
 
-        $scope.send = function (username, message) {
+        $scope.send = function (user) {
+
+            var message = $scope.inputs[user];
+
+            $scope.inputs[user] = '';
+
             var messageObj = {
-                username: username,
+                user: user,
                 message: message
             };
 
             $scope.messages.push(messageObj);
-
-            $scope.inputs[username] = '';
         }
-    }]);
+    }])
+;
 
 angular.bootstrap(document, ['iAdvise']);

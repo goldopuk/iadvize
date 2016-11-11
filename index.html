@@ -9,28 +9,36 @@
 <body>
 
    <div class="wrapper" ng-controller="ChatController">
-       <div class="col right">
-           <h3>Batman</h3>
-           <div ng-repeat="message in messages" class="message {{ message.username }}">
-               <span class="username">{{ message.username }} :
-               </span> <span class="text">{{ message.message }}</span>
-           </div>
+       <div class="left">
+           <h3>{{ userLeft.name }}</h3>
 
-           <div class="message-box">
-               <input type="text" ng-model="inputs.batman">
-               <input type="submit" ng-click="send('batman', inputs.batman)">
+           <ul class="messages-box">
+               <li ng-repeat="messageObj in messages" class="message {{ messageObj.user }}">
+                   <span class="text">{{ messageObj.message }}</span>
+               </li>
+           </ul>
+
+           <div class="input-box">
+               <form>
+                   <input type="text" ng-model="inputs.userLeft">
+                   <input type="submit" ng-click="send('userLeft')">
+               </form>
            </div>
        </div>
+       <div class="right">
+           <h3>{{ userRight.name }}</h3>
 
-       <div class="col left">
-           <h3>Robin</h3>
-           <div ng-repeat="message in messages" class="message {{ message.username }}">
-               <span class="username">{{ message.username }} :
-               </span> <span class="text">{{ message.message }}</span>
-           </div>
-           <div class="message-box">
-               <input type="text" ng-model="inputs.robin">
-               <input type="submit" ng-click="send('robin', inputs.robin)">
+           <ul class="messages-box">
+               <li ng-repeat="messageObj in messages" class="message {{ messageObj.user }}">
+                   <span class="text">{{ messageObj.message }}</span>
+               </li>
+           </ul>
+
+           <div class="input-box">
+               <form>
+                   <input type="text" ng-model="inputs.userRight">
+                   <input type="submit" ng-click="send('userRight')">
+               </form>
            </div>
        </div>
    </div>
